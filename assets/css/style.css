@@ -1,0 +1,1011 @@
+/* ==========================================================
+   GOOGLE FONT
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #0F172A,
+        #1E3A8A,
+        #2563EB
+    );
+
+    color:#ffffff;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+}
+
+/* ==========================================================
+   VARIABLES
+========================================================== */
+
+:root{
+
+    --primary:#3B82F6;
+
+    --secondary:#38BDF8;
+
+    --success:#10B981;
+
+    --danger:#EF4444;
+
+    --warning:#FACC15;
+
+    --dark:#0F172A;
+
+    --light:#F8FAFC;
+
+    --glass:rgba(255,255,255,.12);
+
+    --border:rgba(255,255,255,.18);
+
+    --shadow:0 20px 50px rgba(0,0,0,.25);
+
+    --radius:24px;
+
+}
+
+/* ==========================================================
+   TYPOGRAPHY
+========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    font-weight:700;
+
+}
+
+p{
+
+    color:#d8e3ff;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================================
+   LINKS
+========================================================== */
+
+a{
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+/* ==========================================================
+   IMAGES
+========================================================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+button{
+
+    transition:.35s;
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0F172A;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#3B82F6;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#60A5FA;
+
+}
+
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+.weather-navbar{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(15,23,42,.45);
+
+    border-bottom:1px solid rgba(255,255,255,.12);
+
+    padding:18px 0;
+
+}
+
+.navbar-brand{
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+    color:#ffffff !important;
+
+    letter-spacing:.5px;
+
+}
+
+.navbar-brand i{
+
+    color:#38BDF8;
+
+    margin-right:8px;
+
+    font-size:1.9rem;
+
+}
+
+.theme-btn{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:rgba(255,255,255,.12);
+
+    color:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.35s;
+
+}
+
+.theme-btn:hover{
+
+    background:#3B82F6;
+
+    transform:rotate(180deg);
+
+}
+
+/* ==========================================================
+   HERO SECTION
+========================================================== */
+
+.hero-section{
+
+    padding:100px 0;
+
+}
+
+.hero-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    padding:10px 22px;
+
+    border-radius:999px;
+
+    font-weight:500;
+
+    backdrop-filter:blur(12px);
+
+}
+
+.hero-badge i{
+
+    color:#FACC15;
+
+}
+
+.hero-title{
+
+    font-size:4rem;
+
+    font-weight:800;
+
+    line-height:1.2;
+
+    margin-top:25px;
+
+}
+
+.text-gradient{
+
+    background:linear-gradient(
+
+        90deg,
+
+        #38BDF8,
+
+        #60A5FA,
+
+        #ffffff
+
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.hero-description{
+
+    font-size:1.1rem;
+
+    margin-top:25px;
+
+    max-width:560px;
+
+}
+
+.hero-buttons{
+
+    margin-top:35px;
+
+}
+
+.hero-buttons .btn{
+
+    padding:15px 38px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    border:none;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #2563EB,
+
+        #38BDF8
+
+    );
+
+    box-shadow:0 15px 35px rgba(37,99,235,.35);
+
+}
+
+.hero-buttons .btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 25px 50px rgba(37,99,235,.45);
+
+}
+
+.hero-image{
+
+    max-width:520px;
+
+    margin:auto;
+
+    animation:floatWeather 4s ease-in-out infinite;
+
+}
+
+/* ==========================================================
+   FLOAT ANIMATION
+========================================================== */
+
+@keyframes floatWeather{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+/* ==========================================================
+   SEARCH SECTION
+========================================================== */
+
+.search-section{
+
+    padding:70px 0;
+
+}
+
+.search-card{
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:28px;
+
+    padding:45px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.section-title{
+
+    font-size:2.3rem;
+
+    font-weight:700;
+
+    color:#ffffff;
+
+}
+
+.input-group{
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+}
+
+.input-group-text{
+
+    background:rgba(255,255,255,.12);
+
+    color:#ffffff;
+
+    border:none;
+
+    padding:18px;
+
+}
+
+.form-control{
+
+    background:rgba(255,255,255,.10);
+
+    border:none;
+
+    color:#ffffff;
+
+    padding:18px;
+
+}
+
+.form-control::placeholder{
+
+    color:#d6e4ff;
+
+}
+
+.form-control:focus{
+
+    background:rgba(255,255,255,.15);
+
+    color:#ffffff;
+
+    box-shadow:none;
+
+}
+
+#searchBtn{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #2563EB,
+
+        #38BDF8
+
+    );
+
+    border:none;
+
+    padding:0 35px;
+
+    font-weight:600;
+
+}
+
+#searchBtn:hover{
+
+    transform:scale(1.04);
+
+}
+
+/* ==========================================================
+   CURRENT WEATHER
+========================================================== */
+
+.current-weather{
+
+    padding-bottom:80px;
+
+}
+
+.weather-card{
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:32px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    padding:50px;
+
+    box-shadow:var(--shadow);
+
+}
+
+#cityName{
+
+    font-size:2.2rem;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+#temperature{
+
+    font-size:5rem;
+
+    font-weight:800;
+
+    color:#ffffff;
+
+    margin-bottom:10px;
+
+}
+
+#weatherCondition{
+
+    color:#38BDF8;
+
+    font-weight:600;
+
+    margin-bottom:12px;
+
+}
+
+#currentDate{
+
+    color:#d8e3ff;
+
+}
+
+.weather-icon{
+
+    width:220px;
+
+    margin:auto;
+
+    animation:floatWeather 4s ease-in-out infinite;
+}
+
+/* ==========================================================
+   WEATHER INFO
+========================================================== */
+
+.weather-info{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-top:30px;
+
+}
+
+.weather-info-item{
+
+    background:rgba(255,255,255,.10);
+
+    border-radius:18px;
+
+    padding:15px 22px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.weather-info-item i{
+
+    font-size:1.3rem;
+
+    color:#38BDF8;
+
+}
+/* ==========================================================
+   TODAY'S HIGHLIGHTS
+========================================================== */
+
+.highlights-section{
+
+    padding-bottom:80px;
+
+}
+
+.highlight-card{
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:24px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.highlight-card:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.highlight-card i{
+
+    font-size:2.6rem;
+
+    color:#38BDF8;
+
+    margin-bottom:18px;
+
+}
+
+.highlight-card h5{
+
+    color:#d8e3ff;
+
+    margin-bottom:12px;
+
+    font-size:1rem;
+
+}
+
+.highlight-card h3{
+
+    font-size:2rem;
+
+    color:#ffffff;
+
+    font-weight:700;
+
+}
+
+
+/* ==========================================================
+   FORECAST SECTION
+========================================================== */
+
+.forecast-section{
+
+    padding-bottom:90px;
+
+}
+
+.forecast-card{
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:22px;
+
+    padding:25px 20px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.forecast-card:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.forecast-card h5{
+
+    color:#ffffff;
+
+    margin-bottom:15px;
+
+    font-weight:600;
+
+}
+
+.forecast-icon{
+
+    width:75px;
+
+    margin:15px auto;
+
+}
+
+.forecast-card h4{
+
+    color:#38BDF8;
+
+    font-size:1.6rem;
+
+    font-weight:700;
+
+}
+
+
+/* ==========================================================
+   GLASS EFFECT
+========================================================== */
+
+.weather-card,
+.search-card,
+.highlight-card,
+.forecast-card{
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.weather-card::before,
+.search-card::before,
+.highlight-card::before,
+.forecast-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.15),
+
+        transparent
+
+    );
+
+    transition:.8s;
+
+}
+
+.weather-card:hover::before,
+.search-card:hover::before,
+.highlight-card:hover::before,
+.forecast-card:hover::before{
+
+    left:120%;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.weather-footer{
+
+    padding:50px 0;
+
+    background:rgba(0,0,0,.15);
+
+    backdrop-filter:blur(20px);
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+}
+
+.weather-footer h5{
+
+    font-size:1.7rem;
+
+    color:#ffffff;
+
+    margin-bottom:18px;
+
+}
+
+.weather-footer h5 i{
+
+    color:#38BDF8;
+
+    margin-right:8px;
+
+}
+
+.weather-footer p{
+
+    color:#d8e3ff;
+
+    margin-bottom:12px;
+
+}
+
+.weather-footer small{
+
+    color:#9fb4d8;
+
+}
+
+/* ==========================================================
+   HEART ANIMATION
+========================================================== */
+
+.footer-heart{
+
+    display:inline-block;
+
+    color:#ff4d6d;
+
+    animation:heartbeat 1.2s infinite;
+
+}
+
+@keyframes heartbeat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    15%{
+
+        transform:scale(1.25);
+
+    }
+
+    30%{
+
+        transform:scale(1);
+
+    }
+
+    45%{
+
+        transform:scale(1.25);
+
+    }
+
+    60%{
+
+        transform:scale(1);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* ==========================================================
+   LIGHT THEME
+========================================================== */
+
+body.light-theme{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #e0f2fe,
+
+        #bfdbfe,
+
+        #ffffff
+
+    );
+
+    color:#1e293b;
+
+}
+
+body.light-theme .navbar-brand,
+
+body.light-theme .hero-title,
+
+body.light-theme .section-title,
+
+body.light-theme #cityName,
+
+body.light-theme #temperature{
+
+    color:#1e293b !important;
+
+}
+
+body.light-theme p,
+
+body.light-theme h5{
+
+    color:#475569;
+
+}
+
+/* ==========================================================
+   SELECTION
+========================================================== */
+
+::selection{
+
+    background:#38BDF8;
+
+    color:#ffffff;
+
+}
+
+/* ==========================================================
+   TRANSITIONS
+========================================================== */
+
+body,
+
+.weather-card,
+
+.search-card,
+
+.highlight-card,
+
+.forecast-card,
+
+.theme-btn,
+
+.btn{
+
+    transition:.35s ease;
+
+}
+
+/* ==========================================================
+   SHADOW UTILITIES
+========================================================== */
+
+.shadow-soft{
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+.shadow-heavy{
+
+    box-shadow:0 25px 60px rgba(0,0,0,.30);
+
+}
+
+/* ==========================================================
+   BORDER RADIUS UTILITIES
+========================================================== */
+
+.radius-lg{
+
+    border-radius:30px;
+
+}
+
+.radius-xl{
+
+    border-radius:40px;
+
+}
